@@ -1,19 +1,38 @@
-import React, { useState } from 'react'
-import "./TodoInput.css"
+import React, { useState } from 'react';
+import "./TodoInput.css";
+import { PlusIcon } from '@heroicons/react/24/outline'; // Updated import
 
+function TodoInput({todos,setTodos}) {
+    // State
+    const [todo, setTodo] = useState("");
 
+    const handleClick=()=>{
+         //arrray of object id,name,iscompleted
+         const newTodo={
+            id:1,
+            name:todo,
+            isCompleted:false
 
-function TodoInput() {
+         }
+         const newTodos=[...todos,newTodo]
+         //stateUpdate
+         setTodos(newTodos)
+    }
 
-    //stae
-    const [todo,setTodo]=useState("type")
-  return (
-    <div>
-      <input type="text" value={todo} onChange={(event)=>{
-      setTodo(event.target.value)
-      }}/>
-    </div>
-  )
+    return (
+        <div>
+            <input 
+                type="text" 
+                value={todo} 
+                onChange={(event) => {
+                    setTodo(event.target.value);
+                }} 
+            />
+            <button onClick={handleClick}>
+                <PlusIcon style={{ width: "18px", height: "10px" }} /> 
+            </button>
+        </div>
+    );
 }
 
-export default TodoInput
+export default TodoInput;
