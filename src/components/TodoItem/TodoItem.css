@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column; /* Change to column layout */
     padding: 15px;
-    background-color: rgb(122, 159, 159);
+    background-color: #f1f5f9;
     margin-top: 15px;
     border-radius: 10px;
 }
@@ -10,7 +10,7 @@
 .todo-item-text {
     display: flex;
     gap: 10px;
-    margin-bottom: 10px; /* Space between text and buttons */
+    margin-bottom: 10px; /* Add space below the text */
 }
 
 .todo-item-buttons {
@@ -27,12 +27,12 @@
     height: 20px;
 }
 
-.pencel-button {
-    color: blue;
-    border: 1px solid saddlebrown; /* Add solid border */
+.pencil-button {
+    color: #0ea5e9;
+    border: 1px solid #0ea5e9;
 }
 
 .trash-button {
-    color: blue;
-    border: 1px solid saddlebrown; /* Add solid border */
+    color: #f43f5e;
+    border: 1px solid #f43f5e;
 }

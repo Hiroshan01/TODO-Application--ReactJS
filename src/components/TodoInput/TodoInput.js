@@ -9,16 +9,19 @@ function TodoInput({todos,setTodos}) {
 
     const handleClick=()=>{
          //arrray of object id,name,iscompleted
-         const newTodo={
-            id:v4(),
-            name:todo,
-            isCompleted:false
-
+         if(todo.length>0){
+            const newTodo={
+                id:v4(),
+                name:todo,
+                isCompleted:false
+    
+             }
+             const newTodos=[...todos,newTodo]
+             //stateUpdate
+             setTodos(newTodos)
+             setTodo("")
          }
-         const newTodos=[...todos,newTodo]
-         //stateUpdate
-         setTodos(newTodos)
-         setTodo("")
+
     }
 
     return (
