@@ -2,7 +2,20 @@ import React from 'react'
 import "./TodoItem.css"
 import { PencilIcon, TrashIcon } from '@heroicons/react/24/outline'
 
-function TodoItem({todo,index}) {
+function TodoItem({todo,index,todos,setTodos}) {
+
+  const handleDelete=()=>{
+   const newTodos=todos.filter((item)=>{
+    if (todo.id===item.id){
+      return false
+    }else{
+      return true
+    }
+   })
+   setTodos(newTodos)
+     
+  }
+
   return (
     <div className='todo-item-wrapper'>
         <div className='todo-item-text'>
@@ -14,7 +27,7 @@ function TodoItem({todo,index}) {
             <PencilIcon/>
 
         </button>
-        <button>
+        <button className='trash-button' onClick={handleDelete}>
            <TrashIcon/> 
         </button>
 
