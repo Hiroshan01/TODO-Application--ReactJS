@@ -12,8 +12,8 @@ const [todos,setTodos]=useState([])
       <h1>My Todos</h1>
       <TodoInput todos={todos} setTodos={setTodos}/>
       <div className='todo-item-wrapper'>
-        {todos.map((item)=>{
-            return <TodoItem key={item.id} todo={item}/>
+        {todos.map((item, index)=>{
+            return <TodoItem index={index+1} key={item.id} todo={item}/>
         })}
       </div>
     </div>

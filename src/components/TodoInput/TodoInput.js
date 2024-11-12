@@ -28,6 +28,7 @@ function TodoInput({todos,setTodos}) {
                 onChange={(event) => {
                     setTodo(event.target.value);
                 }} 
+                placeholder='Enter your todos...'
             />
             <button onClick={handleClick}>
                 <PlusIcon className='plus-icon' /> 

@@ -4,5 +4,24 @@
 }
 .todo-input-wrapper{
     display: flex;
-    gap:15px
+    gap:15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.todo-input-wrapper input{
+    background-color: #e2e8f0;
+    border: 0;
+    padding: 10px;
+    border-radius: 5px;
+    width: 360px;
+
+
+}
+.todo-input-wrapper button{
+    background-color:#d1fae5;
+    color: #059669;
+    border: 0;
+    padding: 10px;
+    border-radius: 5px;
 }
