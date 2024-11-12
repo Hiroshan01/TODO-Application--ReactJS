@@ -17,10 +17,11 @@ function TodoInput({todos,setTodos}) {
          const newTodos=[...todos,newTodo]
          //stateUpdate
          setTodos(newTodos)
+         setTodo("")
     }
 
     return (
-        <div>
+        <div className='todo-input-wrapper'>
             <input 
                 type="text" 
                 value={todo} 
@@ -29,7 +30,7 @@ function TodoInput({todos,setTodos}) {
                 }} 
             />
             <button onClick={handleClick}>
-                <PlusIcon style={{ width: "18px", height: "10px" }} /> 
+                <PlusIcon className='plus-icon' /> 
             </button>
         </div>
     );

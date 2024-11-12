@@ -1,0 +1,8 @@
+.plus-icon{
+    height: 10px;
+    width: 10px;
+}
+.todo-input-wrapper{
+    display: flex;
+    gap:15px
+}

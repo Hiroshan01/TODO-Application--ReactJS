@@ -1,10 +1,10 @@
 import React from 'react'
 import "./TodoItem.css"
 
-function TodoItem() {
+function TodoItem({todo}) {
   return (
     <div>
-      <h1>Hi </h1>
+      <div>{todo.name}</div>
     </div>
   )
 }

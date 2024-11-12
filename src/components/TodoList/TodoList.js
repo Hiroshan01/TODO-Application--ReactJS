@@ -8,12 +8,12 @@ function TodoList() {
 const [todos,setTodos]=useState([])
 
   return (
-    <div>
+    <div className='todo-list-container'>
       <h1>My Todos</h1>
       <TodoInput todos={todos} setTodos={setTodos}/>
-      <div>
+      <div className='todo-item-wrapper'>
         {todos.map((item)=>{
-            return <TodoItem key={item.id}/>
+            return <TodoItem key={item.id} todo={item}/>
         })}
       </div>
     </div>
